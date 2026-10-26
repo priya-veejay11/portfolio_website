@@ -302,3 +302,9 @@ nav {
 .contact-links a:active {
     transform: scale(0.96);
 }
+
+.project-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
