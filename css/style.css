@@ -40,16 +40,25 @@ body {
     flex: 1;
 }
 
+
 .hero-image {
-    flex: 0 0 320px;
+    flex: none;
+    width: 300px;
+    height: 300px;
+    align-self: center;
+    margin-top: 1.5rem;
+    border-radius: 50%;
+    /*overflow: hidden;*/
 }
+
 
 .hero-image img {
     width: 100%;
-    aspect-ratio: 4 / 5;
+    height: 100%;
     object-fit: cover;
-    border-radius: 180px 180px 24px 24px;
-    border: 2px solid var(--accent-color);
+    object-position: center 20%;
+    border-radius: inherit;
+    transform: scale(1.12);
 }
 
 .hero-name {
@@ -57,7 +66,7 @@ body {
     font-family: var( --heading-font);
     color: var(--accent-color);
     font-size: 1.4rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
     text-transform: none !important;
 }
 
@@ -227,7 +236,11 @@ nav {
 }
 
 .project-card {
-    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 1.5rem;
     margin-top: 1.5rem;
     border: 1px solid rgba(232, 220, 200, 0.18);
     background-color: rgba(20, 42, 35, 0.35);
@@ -244,6 +257,7 @@ nav {
     width: 100%;
     height: 200px;
     object-fit: cover;
+    display: block;
     border-radius: 10px;
 }
 
@@ -254,6 +268,9 @@ nav {
 
 .project-category {
     flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-categories {
@@ -307,4 +324,210 @@ nav {
     display: block;
     color: inherit;
     text-decoration: none;
+}
+
+
+@media (min-width: 769px) {
+    .project-card img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 10px;
+        display: block;
+    }
+}
+
+
+/* ================================
+   MOBILE RESPONSIVE DESIGN
+   ================================ */
+
+@media screen and (max-width: 768px) {
+
+    /* Header and navigation */
+    header {
+        padding: 1rem 5%;
+        gap: 1rem;
+    }
+
+    header > a {
+        font-size: 0.9rem;
+        flex-shrink: 0;
+    }
+
+    nav {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    nav a {
+        font-size: 0.75rem;
+    }
+
+    /* Hero section */
+    #home {
+        min-height: auto;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+        padding: 2rem 8% 1rem;
+        gap: 2rem;
+    }
+
+    .hero-content {
+        flex: auto;
+        min-width: 0;
+    }
+
+    #home h1 {
+        font-size: clamp(2.7rem, 10vw, 3.5rem);
+        line-height: 1.05;
+        margin: 1rem 0 1.25rem;
+    }
+
+    #home p:first-of-type {
+        font-size: 0.75rem;
+        line-height: 1.6;
+        margin-bottom: 0.75rem;
+    }
+
+    #home p:last-of-type {
+        font-size: 1rem;
+        line-height: 1.7;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-buttons {
+        gap: 0.75rem;
+    }
+
+    .btn-primary,
+    .btn-outline {
+        padding: 0.8rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    /* Profile image */
+
+    .hero-image {
+        width: 220px;
+        height: 220px;
+        margin-top: 1rem;
+        flex: none;
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 20%;
+        border-radius: inherit;
+        transform: scale(1.12);
+    }
+
+
+    .hero-name {
+        font-size: 1.15rem;
+        margin-top: 1.3rem;
+        margin-bottom: 0;
+    }
+
+    /* About section */
+    #about {
+        padding: 1.5rem 8% 2.5rem;
+        margin-top: 3rem;
+    }
+
+    .section-label {
+        font-size: 0.8rem;
+        margin-bottom: 1rem;
+    }
+
+    #about h2 {
+        font-size: clamp(2.2rem, 8vw, 3rem);
+        line-height: 1.12;
+        margin-bottom: 1.25rem;
+    }
+
+    .about-content p {
+        font-size: 1rem;
+        line-height: 1.75;
+    }
+
+    .about-skills {
+        gap: 0.65rem;
+    }
+
+    .about-skills span {
+        font-size: 0.8rem;
+        padding: 0.5rem 0.8rem;
+    }
+
+    /* Projects section */
+    #projects {
+        padding: 3.5rem 8%;
+    }
+
+    .project-categories {
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+
+    .project-category {
+        min-width: 0;
+    }
+
+    .project-card {
+        padding: 1.25rem;
+        margin-top: 0.3rem;
+    }
+
+    .project-card img {
+        height: 180px;
+    }
+
+    /* Contact section */
+    #contact {
+        padding: 3.5rem 8%;
+    }
+
+    .contact-links {
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    .contact-links a {
+        padding: 12px 20px;
+        font-size: 0.85rem;
+    }
+}
+
+/* Extra-small phones */
+@media screen and (max-width: 380px) {
+
+    header {
+        padding: 0.9rem 4%;
+    }
+
+    nav {
+        gap: 0.65rem;
+    }
+
+    nav a {
+        font-size: 0.68rem;
+    }
+
+    #home h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-image {
+        width: min(70%, 220px);
+    }
+
+    .hero-buttons {
+        gap: 0.6rem;
+    }
 }
