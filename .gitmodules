@@ -4,3 +4,6 @@
 [submodule "python-projects/watermark-app"]
 	path = python-projects/watermark-app
 	url = https://github.com/priya-veejay11/watermark-studio.git
+[submodule "python-projects/typing-speed-test"]
+	path = python-projects/typing-speed-test
+	url = https://github.com/priya-veejay11/typing-speed-test.git
