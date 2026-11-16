@@ -7,3 +7,6 @@
 [submodule "python-projects/typing-speed-test"]
 	path = python-projects/typing-speed-test
 	url = https://github.com/priya-veejay11/typing-speed-test.git
+[submodule "python-projects/breakout-game"]
+	path = python-projects/breakout-game
+	url = https://github.com/priya-veejay11/breakout-game.git
