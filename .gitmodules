@@ -10,3 +10,6 @@
 [submodule "python-projects/breakout-game"]
 	path = python-projects/breakout-game
 	url = https://github.com/priya-veejay11/breakout-game.git
+[submodule "python-projects/cafe-and-wifi-website"]
+	path = python-projects/cafe-and-wifi-website
+	url = https://github.com/priya-veejay11/cafe-and-wifi-website.git
