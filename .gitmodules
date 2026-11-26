@@ -13,3 +13,6 @@
 [submodule "python-projects/cafe-and-wifi-website"]
 	path = python-projects/cafe-and-wifi-website
 	url = https://github.com/priya-veejay11/cafe-and-wifi-website.git
+[submodule "python-projects/kanban-task-manager"]
+	path = python-projects/kanban-task-manager
+	url = https://github.com/priya-veejay11/kanban-task-manager.git
